@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.animalhelp.mybatis.mapper.DemoMapper">
+
+    <resultMap id="demo" type="org.animalhelp.mybatis.domain.Demo">
+        <result property="id" column="id"></result>
+        <result property="name" column="name"></result>
+    </resultMap>
+
+    <select id="getDemo" resultMap="demo">
+        select d.id id, d.name name from demo d
+    </select>
+
+</mapper>

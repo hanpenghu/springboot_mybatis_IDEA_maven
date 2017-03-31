@@ -11,6 +11,6 @@
         <package name="com.qy.mybatis.domain"/>
     </typeAliases>
     <mappers>
-        <mapper resource="mapper/common.xml"/>
+        <mapper resource="mybatis/mapper/demo.xml"/>
     </mappers>
 </configuration>

@@ -5,10 +5,10 @@ mybatis.config: classpath:mybatis-config.xml
 
 spring:
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://?useUnicode=true&characterEncoding=UTF8&autoReconnect=true
-    username:
-    password:
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
     #数据库连接池配置
     max-active: 50
     max-idle: 20
@@ -24,3 +24,5 @@ spring:
     min-evictable-idle-time-millis: 3600000
     max-wait: 60000
     jdbc-interceptors: ConnectionState;SlowQueryReport(threshold=0)
+
+flyway.baselineOnMigrate: true
