@@ -19,7 +19,7 @@ public class DemoServiceImpl implements DemoService {
     private final static Logger logger = LoggerFactory.getLogger(DemoServiceImpl.class);
 
     @Autowired
-    private DemoMapper demoMapper;
+    private transient DemoMapper demoMapper;
 
     @Override
     public List<Demo> getDemo(){

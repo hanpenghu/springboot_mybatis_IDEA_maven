@@ -17,7 +17,7 @@ import java.util.List;
 public class DemoController {
 
     @Autowired
-    private DemoService demoService;
+    private transient DemoService demoService;
 
     @RequestMapping(value = "/demo", method = RequestMethod.GET)
     public List<Demo> getDemo(){
